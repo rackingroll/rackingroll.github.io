@@ -1,0 +1,31 @@
+.div-bio
+{
+    position:relative;
+    overflow:hidden;
+}
+
+.img-bio
+{
+    position:relative;
+    width:125px;
+    float:left;
+}
+
+.div-bio-content
+{
+    margin-left:20px;
+    position:relative;
+    float:left;
+    width:450px;
+}
+
+.span-bio-name
+{
+    font-weight:bold;
+}
+
+.hr-bio-split
+{
+    margin-top:15px;
+    margin-bottom:15px;
+}
