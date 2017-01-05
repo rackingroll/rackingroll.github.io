@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <title>Rush Lab</title>
+  <meta name="description" content="Rice University Sketching and Hashing Labs" />
+  <meta name="keywords" content="Extreme Scale Machine Learing" />
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="links"></div>
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="blue", allows you to change the colour of the text - other classes are: "green", "orange", "red", "purple" and "yellow" -->
+          <img src="logo_rush.png" alt="rush_logo"  height=100 border=1> <font size="3" color="grey">Rice University Sketching and Hashing Lab</font> 
+        </div>
+		
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="tab_selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="..\index.html">Home</a></li>
+          <li><a href="..\Research.html">Research</a></li>
+          <!--li  ><a href="Publication.html">Publications</a></li-->
+          <li><a href="..\People.html">People</a></li>
+		  <li><a href="..\Codes.html">Softwares</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+		<td width=225 valign="top"> 
+	       <img src="animated_tagCloud.gif" alt="tag cloud"  height=225 border=1> 
+        </td> 
+        <h1>News and Events</h1>
+        <!--h3>NIPS 2014 oral paper "Asymmetric LSH for Sub-linear Maximum Inner Product Search"</h3>
+        <h3>Best Paper Award at IEEE/ACM ASONAM for paper "A New Space for Comparing Graphs"</h3-->
+		<h1>Contact</h1>
+		<h3>anshumali at rice dot edu</h3>
+		<h3>3118 Duncan Hall</h3>
+		<h3>Rice University</h3>
+        <!--p>2011 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p-->
+        <!--h1>Useful Links</h1>
+        <ul>
+          <li><a href="#">link 1</a></li>
+          <li><a href="#">link 2</a></li>
+          <li><a href="#">link 3</a></li>
+          <li><a href="#">link 4</a></li>
+        </ul>
+        <h1>Useful Info</h1>
+        <p>You can put anything you like in the sidebar. Latest news, useful links, images, contact information. Anything you think the visitor will find useful.</p-->
+      </div>
+      <div id="content" align="center">
+        <!-- insert the page content here -->
+     <h1>SSH (Sketch, Shingle, & Hash) for Indexing Massive-Scale Time Series</h1>
+	 			<tr align="center">
+			<td><!--IMG BORDER="3" ALIGN="Left" height="175" SRC="logo_rush.png"--> 
+		 <p style="font-size:130%;margin:0px 10px;" style="text-align:center">
+		 
+		 
+		Similarity search on time series is a frequent operation in large-scale data-driven applications. Sophisticated similarity measures are standard for time series matching, as they are usually misaligned. Dynamic Time Warping or DTW is the most widely used similarity measure for time series because it combines alignment and matching at the same time. However, the alignment makes DTW slow. To speed up the expensive similarity search with DTW, branch and bound based pruning strategies are adopted. However, branch and bound based pruning are only useful for very short queries (low dimensional time series), and the bounds are quite weak for longer queries. Due to the loose bounds branch and bound pruning strategy boils down to a brute-force search.
+		</br>       
+		<div align="center">		
+		<img src="dtw.png" width="500px"/>   
+		</div>
+		</p>
+		</br>
+		<p style="font-size:130%;margin:0px 10px;" style="text-align:center">
+		To circumvent this issue, we design SSH (Sketch, Shingle, & Hashing), an efficient and approximate hashing scheme which is much faster than the state-of-the-art branch and bound searching technique: the UCR suite. SSH uses a novel combination of sketching, shingling and hashing techniques to produce (probabilistic) indexes which align (near perfectly) with DTW similarity measure. The generated indexes are then used to create hash buckets for sub-linear search. Our results show that SSH is very effective for longer time sequence and prunes around 95% candidates, leading to the massive speedup in search with DTW. Empirical results on two large-scale benchmark time series data show that our proposed method can be around 20 times faster than the state-of-the-art package (UCR suite) without any significant loss in accuracy.
+		
+		</br>
+		<div align="center">
+		 <img src="frameworknips.png" style="margin-top:0px;border:0;margin-bottom:0px" width="500px"/>
+		 </div>
+		 
+		 <p style="font-size:130%;margin:0px 10px;" style="text-align:center">
+		The table bellow shows the CPU Execution time (in seconds) of UCR Suite and our proposed hashing method on ECG and Random Walk Dataset, with increasing query length. Hashing algorithm is consistently faster than UCR suite and gets even better with increase in query length. For longer query time series, hashing can be 20x faster.
+		</p>
+		 <div align="center">
+		 <img src="result.png" style="margin-top:0px;border:0;margin-bottom:0px" width="800px"/>
+		 
+		  
+
+		 </div>
+		 </br>
+		 </p> </tr>   </table>
+		   
+			
+	
+	<table style="width:100%">
+        <tr>
+			<td> 
+				<p style="font-size:130%;margin:0px 10px;"><strong>SSH (Sketch, Shingle, & Hash) for Indexing Massive-Scale Time Series </strong> [<a href="https://arxiv.org/pdf/1610.07328v1.pdf">pdf</a>]  <br> Chen Luo, Anshumali Shrivastava. (2016)<br></p>
+				
+			</td>
+		</tr>		
+	</div>
+    </div>
+    </div>
+</body>
+</html>
