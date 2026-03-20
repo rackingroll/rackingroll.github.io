@@ -27,3 +27,20 @@ body
     margin-bottom: 8px;
     line-height: 1.6;
 }
+.pub-list
+{
+    list-style-type: disc;
+    padding-left: 16px;
+    margin-left: 0;
+}
+.pub-list li
+{
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.pub-highlight
+{
+    color: #c00;
+    font-size: 0.9em;
+}
