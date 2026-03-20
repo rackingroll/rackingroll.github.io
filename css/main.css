@@ -22,3 +22,8 @@ body
 {
     margin-left: 10px;
 }
+.talks-list li
+{
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
