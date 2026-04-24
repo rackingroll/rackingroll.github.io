@@ -1,5 +1,3 @@
----
----
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,10 +9,9 @@
   gtag('js', new Date());
   gtag('config', 'G-4MTZG9B3D7');
 </script>
-        <title>Blog - Chen Luo</title>
+        <title>{{ page.title }} - Chen Luo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="Chen Luo" />
-        <meta name="description" content="Blog posts by Chen Luo on tech, research, and life." />
         <link href="/css/bootstrap.css" rel="stylesheet" />
         <link href="/css/bootstrap-responsive.css" rel="stylesheet" />
         <link href="/css/main.css" rel="stylesheet" />
@@ -36,21 +33,15 @@
                     </div>
                 </div>
                 <div id="body">
-                    <h3>Blog</h3>
-                    <p class="contentItem">Thoughts on tech, research, and the world.</p>
-                    <br />
+                    <div class="blog-post">
+                        <h3>{{ page.title }}</h3>
+                        <p class="blog-meta">{{ page.date | date: "%B %d, %Y" }} · Chen Luo</p>
 
-                    <ul class="blog-list">
-                        {% for post in site.posts %}
-                        <li>
-                            <span class="blog-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-                            <a href="{{ post.url }}">{{ post.title }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
+                        {{ content }}
 
-                    <br />
-                    <p><a href="/index.html">&larr; Back to homepage</a></p>
+                        <br />
+                        <p><a href="/blog/">&larr; All posts</a></p>
+                    </div>
                 </div>
             </div>
         </div>
