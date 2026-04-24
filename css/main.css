@@ -44,3 +44,36 @@ body
     color: #c00;
     font-size: 0.9em;
 }
+
+
+/* Blog styles */
+.blog-list
+{
+    list-style-type: none;
+    padding-left: 0;
+}
+.blog-list li
+{
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+.blog-date
+{
+    color: #999;
+    font-size: 0.9em;
+    margin-right: 10px;
+}
+.blog-post
+{
+    line-height: 1.8;
+}
+.blog-meta
+{
+    color: #999;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+.blog-post p
+{
+    margin-bottom: 15px;
+}
